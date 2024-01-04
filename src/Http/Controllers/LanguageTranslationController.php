@@ -81,9 +81,9 @@ class LanguageTranslationController extends Controller
                 foreach ($translations as $key => $translation) {
                     // if the translation is an array, ignore it. This isn't
                     // supported by the UI at present
-                    if (is_array($translation[config('app.locale')])) {
-                        continue;
-                    }
+                    // if (is_array($translation[config('app.locale')])) {
+                    //     continue;
+                    // }
                     $formattedTranslations[] = [
                             'id' => Str::random(20),
                             'type' => $type,
